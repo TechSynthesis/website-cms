@@ -26,7 +26,7 @@ export const CallToAction: Block = {
               value: 'none',
             },
             {
-              label: 'Create Payload App',
+              label: 'Learn more',
               value: 'cpa',
             },
           ],

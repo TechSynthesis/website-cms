@@ -1,6 +1,7 @@
 import type { Block } from 'payload/types'
 
 import { blockFields } from '../../fields/blockFields'
+import link from '../../fields/link'
 import richText from '../../fields/richText'
 
 export const Slider: Block = {
@@ -34,6 +35,10 @@ export const Slider: Block = {
               label: 'Image Slider',
               value: 'imageSlider',
             },
+            {
+              label: 'Image & Text Link Slider',
+              value: 'imageTextSlider',
+            },
           ],
         },
         {
@@ -51,6 +56,35 @@ export const Slider: Block = {
               relationTo: 'media',
               required: true,
             },
+          ],
+        },
+        {
+          type: 'array',
+          name: 'imageTextSlides',
+          required: true,
+          minRows: 3,
+          admin: {
+            condition: (_, siblingData) => siblingData.sliderType === 'imageTextSlider',
+          },
+          fields: [
+            richText({
+              name: 'richText',
+              required: true,
+              admin: {
+                elements: [],
+                leaves: ['underline'],
+              },
+            }),
+            {
+              type: 'upload',
+              name: 'image',
+              relationTo: 'media',
+              required: true,
+            },
+            link({
+              disableLabel: true,
+              appearances: false,
+            }),
           ],
         },
         {

@@ -1,6 +1,7 @@
 import type { CollectionConfig } from 'payload/types'
 
 import { isAdmin } from '../access/isAdmin'
+import { Accordion } from '../blocks/Accordion'
 import { Banner } from '../blocks/Banner'
 import { BlogContent } from '../blocks/BlogContent'
 import { BlogMarkdown } from '../blocks/BlogMarkdown'
@@ -19,6 +20,7 @@ import { MediaBlock } from '../blocks/Media'
 import { MediaContent } from '../blocks/MediaContent'
 import { Slider } from '../blocks/Slider'
 import { Steps } from '../blocks/Steps'
+import StickyContent from '../blocks/StickyContent'
 import { StickyHighlights } from '../blocks/StickyHighlights'
 
 export const ReusableContent: CollectionConfig = {
@@ -48,6 +50,7 @@ export const ReusableContent: CollectionConfig = {
       type: 'blocks',
       required: true,
       blocks: [
+        Accordion,
         Banner,
         BlogContent,
         BlogMarkdown,
@@ -67,6 +70,7 @@ export const ReusableContent: CollectionConfig = {
         Slider,
         Steps,
         StickyHighlights,
+        StickyContent,
       ],
     },
   ],

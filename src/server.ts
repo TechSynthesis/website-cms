@@ -1,5 +1,6 @@
 import express from 'express'
 import nodemailerSendgrid from 'nodemailer-sendgrid'
+import path from 'path'
 import payload from 'payload'
 
 // eslint-disable-next-line
@@ -21,18 +22,19 @@ const sendgridConfig = {
 }
 
 const start = async (): Promise<void> => {
+  app.use('/assets', express.static(path.resolve(__dirname, '../assets')))
   // Initialize Payload
   await payload.init({
     secret: process.env.PAYLOAD_SECRET,
     mongoURL: process.env.MONGODB_URI,
     express: app,
     email: {
-      fromName: 'Payload CMS',
-      fromAddress: 'info@payloadcms.org',
+      fromName: 'TechInverted CMS',
+      fromAddress: 'info@techinverted.com',
       ...sendgridConfig,
     },
     onInit: () => {
-      payload.logger.info(`Payload Admin URL: ${payload.getAdminURL()}`)
+      payload.logger.info(`Admin URL: ${payload.getAdminURL()}`)
     },
   })
 

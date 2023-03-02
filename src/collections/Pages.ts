@@ -2,6 +2,7 @@ import type { CollectionConfig } from 'payload/types'
 
 import { isAdmin } from '../access/isAdmin'
 import { publishedOnly } from '../access/publishedOnly'
+import { Accordion } from '../blocks/Accordion'
 import { CallToAction } from '../blocks/CallToAction'
 import { CardGrid } from '../blocks/CardGrid'
 import { CaseStudiesHighlight } from '../blocks/CaseStudiesHighlight'
@@ -17,6 +18,7 @@ import { MediaContent } from '../blocks/MediaContent'
 import { ReusableContent } from '../blocks/ReusableContent'
 import { Slider } from '../blocks/Slider'
 import { Steps } from '../blocks/Steps'
+import StickyContent from '../blocks/StickyContent'
 import { StickyHighlights } from '../blocks/StickyHighlights'
 import { fullTitle } from '../fields/fullTitle'
 import { hero } from '../fields/hero'
@@ -74,6 +76,7 @@ export const Pages: CollectionConfig = {
               type: 'blocks',
               required: true,
               blocks: [
+                Accordion,
                 CallToAction,
                 CardGrid,
                 CaseStudyCards,
@@ -87,6 +90,7 @@ export const Pages: CollectionConfig = {
                 MediaBlock,
                 MediaContent,
                 ReusableContent,
+                StickyContent,
                 Slider,
                 Steps,
                 StickyHighlights,

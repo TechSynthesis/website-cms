@@ -2,6 +2,7 @@ import type { CollectionConfig } from 'payload/types'
 
 import { isAdmin } from '../access/isAdmin'
 import { publishedOnly } from '../access/publishedOnly'
+import { Accordion } from '../blocks/Accordion'
 import { CallToAction } from '../blocks/CallToAction'
 import { CardGrid } from '../blocks/CardGrid'
 import { CaseStudiesHighlight } from '../blocks/CaseStudiesHighlight'
@@ -16,6 +17,7 @@ import { MediaContent } from '../blocks/MediaContent'
 import { ReusableContent } from '../blocks/ReusableContent'
 import { Slider } from '../blocks/Slider'
 import { Steps } from '../blocks/Steps'
+import StickyContent from '../blocks/StickyContent'
 import { StickyHighlights } from '../blocks/StickyHighlights'
 import richText from '../fields/richText'
 import largeBody from '../fields/richText/largeBody'
@@ -88,6 +90,8 @@ export const CaseStudies: CollectionConfig = {
         Slider,
         Steps,
         StickyHighlights,
+        Accordion,
+        StickyContent,
       ],
     },
     slugField(),

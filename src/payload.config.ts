@@ -13,6 +13,8 @@ import { Users } from './collections/Users'
 import richText from './fields/richText'
 import { Footer } from './globals/Footer'
 import { MainMenu } from './globals/MainMenu'
+import { Icon } from './graphics/Icon'
+import { Logo } from './graphics/Logo'
 
 export default buildConfig({
   collections: [CaseStudies, Media, Pages, Posts, ReusableContent, Users],
@@ -47,8 +49,19 @@ export default buildConfig({
       generateURL: docs => docs.reduce((url, doc) => `${url}/${doc.slug}`, ''),
     }),
   ],
-  cors: [process.env.PAYLOAD_PUBLIC_APP_URL, 'https://payloadcms.com'].filter(Boolean),
+  cors: [process.env.PAYLOAD_PUBLIC_APP_URL, 'https://techinverted.com'].filter(Boolean),
   admin: {
+    meta: {
+      titleSuffix: '- TechInverted CMS',
+      favicon: '/assets/favicon.svg',
+      ogImage: '/assets/logo.svg',
+    },
+    components: {
+      graphics: {
+        Logo,
+        Icon,
+      },
+    },
     webpack: config => ({
       ...config,
       resolve: {

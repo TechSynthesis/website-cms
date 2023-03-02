@@ -2,11 +2,13 @@ import type { CollectionConfig } from 'payload/types'
 
 import { isAdmin } from '../access/isAdmin'
 import { publishedOnly } from '../access/publishedOnly'
+import { Accordion } from '../blocks/Accordion'
 import { Banner } from '../blocks/Banner'
 import { BlogContent } from '../blocks/BlogContent'
 import { BlogMarkdown } from '../blocks/BlogMarkdown'
 import { Code } from '../blocks/Code'
 import { MediaBlock } from '../blocks/Media'
+import StickyContent from '../blocks/StickyContent'
 import richText from '../fields/richText'
 import { slugField } from '../fields/slug'
 import { formatPreviewURL } from '../utilities/formatPreviewURL'
@@ -57,7 +59,7 @@ export const Posts: CollectionConfig = {
     {
       name: 'content',
       type: 'blocks',
-      blocks: [Banner, BlogContent, Code, BlogMarkdown, MediaBlock],
+      blocks: [Banner, BlogContent, Code, BlogMarkdown, MediaBlock, Accordion, StickyContent],
       required: true,
     },
     slugField(),
