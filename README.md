@@ -1,19 +1,18 @@
 # Payload Website CMS
 
-This is the code that powers the official website CMS for [Payload](https://github.com/payloadcms/payload). The frontend is built with NextJS and [the code can be found here](https://github.com/payloadcms/website).
-
+This is the code that powers the official website CMS for [TechInverted](https://github.com/payloadcms/payload)
 ### Features shown
 
-This CMS showcases many powerful features that Payload is capable of, including:
+This CMS showcases many powerful features including:
 
-1. [Collections](https://payloadcms.com/docs/configuration/collections) and [Globals](https://payloadcms.com/docs/configuration/globals)
-1. [Access Control](https://payloadcms.com/docs/access-control/overview) to restrict who can do what to the site's data
-1. [Versions](https://payloadcms.com/docs/versions/overview) and [Drafts](https://payloadcms.com/docs/versions/drafts) functionality
-1. A great pattern for how to create [reusable fields](https://github.com/payloadcms/website-cms/tree/master/src/fields) that can be used and re-used easily
-1. Many advanced field types, including the [relationship](https://payloadcms.com/docs/fields/relationship), [blocks](https://payloadcms.com/docs/fields/blocks), [array](https://payloadcms.com/docs/fields/array), and many more
-1. The official [Payload SEO plugin](https://github.com/payloadcms/plugin-seo)
-1. The official [Payload Form Builder plugin](https://github.com/payloadcms/plugin-form-builder)
-1. Auto-generated [TypeScript types](https://github.com/payloadcms/public-demo/blob/master/src/payload-types.ts)
+1. [Collections] and [Globals]
+1. [Access Control] to restrict who can do what to the site's data
+1. [Versions] and [Drafts] functionality
+1. A great pattern for how to create [reusable fields] that can be used and re-used easily
+1. Many advanced field types, including the [relationship], [blocks], [array], and many more
+1. SEO 
+1. Form Builder 
+1. Auto-generated TypeScript types
 1. Lots more
 
 ### Running locally
@@ -31,12 +30,12 @@ To do so, you'll need the following software:
 **1. Clone the repo by running the following command at your terminal:**
 
 ```bash
-git clone git@github.com:payloadcms/public-demo.git
+git clone git@github.com:TechSynthesis/website-cms.git
 ```
 
 **Navigate to folder and install dependencies**
 
-Type `cd ./payload-website` and then `yarn` or `npm install --legacy-peer-deps` to add all required dependencies.
+Type `cd ./website-name` and then `yarn` or `npm install --legacy-peer-deps` to add all required dependencies.
 
 **Duplicate the example `.env` file and fill in your own values**
 

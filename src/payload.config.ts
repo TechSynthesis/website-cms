@@ -49,7 +49,11 @@ export default buildConfig({
       generateURL: docs => docs.reduce((url, doc) => `${url}/${doc.slug}`, ''),
     }),
   ],
-  cors: [process.env.PAYLOAD_PUBLIC_APP_URL, 'https://techinverted.com'].filter(Boolean),
+  cors: [
+    process.env.PAYLOAD_PUBLIC_APP_URL,
+    'https://techinverted.com',
+    'https://cmw-dryice.com',
+  ].filter(Boolean),
   admin: {
     meta: {
       titleSuffix: '- TechInverted CMS',
