@@ -18,6 +18,11 @@ import { Logo } from './graphics/Logo'
 
 export default buildConfig({
   collections: [CaseStudies, Media, Pages, Posts, ReusableContent, Users],
+  upload: {
+    limits: {
+      fileSize: 500000000, // 5MB, written in bytes
+    },
+  },
   globals: [Footer, MainMenu],
   graphQL: {
     disablePlaygroundInProduction: false,
