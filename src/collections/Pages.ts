@@ -3,6 +3,8 @@ import type { CollectionConfig } from 'payload/types'
 import { isAdmin } from '../access/isAdmin'
 import { publishedOnly } from '../access/publishedOnly'
 import { Accordion } from '../blocks/Accordion'
+import { Banner } from '../blocks/Banner'
+import { BlogMarkdown } from '../blocks/BlogMarkdown'
 import { CallToAction } from '../blocks/CallToAction'
 import { CardGrid } from '../blocks/CardGrid'
 import { CaseStudiesHighlight } from '../blocks/CaseStudiesHighlight'
@@ -10,11 +12,13 @@ import { CaseStudyCards } from '../blocks/CaseStudyCards'
 import { CodeFeature } from '../blocks/CodeFeature'
 import { Content } from '../blocks/Content'
 import { ContentGrid } from '../blocks/ContentGrid'
+import { FeatureGrid } from '../blocks/FeatureGrid'
 import { Form } from '../blocks/Form'
 import { HoverHighlights } from '../blocks/HoverHighlights'
 import { LinkGrid } from '../blocks/LinkGrid'
 import { MediaBlock } from '../blocks/Media'
 import { MediaContent } from '../blocks/MediaContent'
+import { ProductFeatures } from '../blocks/ProductFeatures'
 import { ReusableContent } from '../blocks/ReusableContent'
 import { Slider } from '../blocks/Slider'
 import { Steps } from '../blocks/Steps'
@@ -77,6 +81,8 @@ export const Pages: CollectionConfig = {
               required: true,
               blocks: [
                 Accordion,
+                Banner,
+                BlogMarkdown,
                 CallToAction,
                 CardGrid,
                 CaseStudyCards,
@@ -85,6 +91,8 @@ export const Pages: CollectionConfig = {
                 Content,
                 ContentGrid,
                 Form,
+                FeatureGrid,
+                ProductFeatures,
                 HoverHighlights,
                 LinkGrid,
                 MediaBlock,

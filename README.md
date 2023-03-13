@@ -1,6 +1,6 @@
-# Payload Website CMS
+# TechInverted Website CMS
 
-This is the code that powers the official website CMS for [TechInverted](https://github.com/payloadcms/payload)
+This is the code that powers the official website CMS for TechInverted
 ### Features shown
 
 This CMS showcases many powerful features including:
