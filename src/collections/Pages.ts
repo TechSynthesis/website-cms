@@ -2,7 +2,6 @@ import type { CollectionConfig } from 'payload/types'
 
 import { isAdmin } from '../access/isAdmin'
 import { publishedOnly } from '../access/publishedOnly'
-import { Accordion } from '../blocks/Accordion'
 import { Banner } from '../blocks/Banner'
 import { BlogMarkdown } from '../blocks/BlogMarkdown'
 import { CallToAction } from '../blocks/CallToAction'
@@ -80,7 +79,6 @@ export const Pages: CollectionConfig = {
               type: 'blocks',
               required: true,
               blocks: [
-                Accordion,
                 Banner,
                 BlogMarkdown,
                 CallToAction,
