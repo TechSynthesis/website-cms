@@ -560,47 +560,6 @@ export interface CaseStudy {
         blockType: 'stickyHighlights';
       }
     | {
-        appearance?: 'default' | 'condensed';
-        sections: {
-          label: string;
-          openOnInit?: boolean;
-          columns: {
-            width: 'oneThird' | 'half' | 'twoThirds' | 'full';
-            alignment: 'left' | 'center' | 'right';
-            richText: {
-              [k: string]: unknown;
-            }[];
-            links: {
-              link: {
-                type?: 'reference' | 'custom';
-                newTab?: boolean;
-                reference:
-                  | {
-                      value: string | Page;
-                      relationTo: 'pages';
-                    }
-                  | {
-                      value: string | Post;
-                      relationTo: 'posts';
-                    }
-                  | {
-                      value: string | CaseStudy;
-                      relationTo: 'case-studies';
-                    };
-                url: string;
-                label: string;
-              };
-              id?: string;
-            }[];
-            id?: string;
-          }[];
-          id?: string;
-        }[];
-        id?: string;
-        blockName?: string;
-        blockType: 'accordion';
-      }
-    | {
         sections: {
           label: string;
           description: string;
@@ -609,6 +568,122 @@ export interface CaseStudy {
         id?: string;
         blockName?: string;
         blockType: 'sticky-content';
+      }
+    | {
+        featureGridFields: {
+          richText: {
+            [k: string]: unknown;
+          }[];
+          links: {
+            link: {
+              type?: 'reference' | 'custom';
+              newTab?: boolean;
+              reference:
+                | {
+                    value: string | Page;
+                    relationTo: 'pages';
+                  }
+                | {
+                    value: string | Post;
+                    relationTo: 'posts';
+                  }
+                | {
+                    value: string | CaseStudy;
+                    relationTo: 'case-studies';
+                  };
+              url: string;
+              label: string;
+            };
+            id?: string;
+          }[];
+          cards: {
+            title: string;
+            description?: string;
+            enableLink?: boolean;
+            link: {
+              type?: 'reference' | 'custom';
+              newTab?: boolean;
+              reference:
+                | {
+                    value: string | Page;
+                    relationTo: 'pages';
+                  }
+                | {
+                    value: string | Post;
+                    relationTo: 'posts';
+                  }
+                | {
+                    value: string | CaseStudy;
+                    relationTo: 'case-studies';
+                  };
+              url: string;
+              appearance?: 'default' | 'primary' | 'secondary';
+            };
+            cardIcon?: string | Media;
+            id?: string;
+          }[];
+          productPhoto: string | Media;
+        };
+        id?: string;
+        blockName?: string;
+        blockType: 'featureGrid';
+      }
+    | {
+        productFeaturesFields: {
+          richText: {
+            [k: string]: unknown;
+          }[];
+          links: {
+            link: {
+              type?: 'reference' | 'custom';
+              newTab?: boolean;
+              reference:
+                | {
+                    value: string | Page;
+                    relationTo: 'pages';
+                  }
+                | {
+                    value: string | Post;
+                    relationTo: 'posts';
+                  }
+                | {
+                    value: string | CaseStudy;
+                    relationTo: 'case-studies';
+                  };
+              url: string;
+              label: string;
+            };
+            id?: string;
+          }[];
+          cards: {
+            title: string;
+            description?: string;
+            enableLink?: boolean;
+            link: {
+              type?: 'reference' | 'custom';
+              newTab?: boolean;
+              reference:
+                | {
+                    value: string | Page;
+                    relationTo: 'pages';
+                  }
+                | {
+                    value: string | Post;
+                    relationTo: 'posts';
+                  }
+                | {
+                    value: string | CaseStudy;
+                    relationTo: 'case-studies';
+                  };
+              url: string;
+            };
+            cardIcon: string | Media;
+            id?: string;
+          }[];
+        };
+        id?: string;
+        blockName?: string;
+        blockType: 'productFeatures';
       }
   )[];
   slug?: string;
