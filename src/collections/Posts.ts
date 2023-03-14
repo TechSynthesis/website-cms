@@ -2,6 +2,7 @@ import type { CollectionConfig } from 'payload/types'
 
 import { isAdmin } from '../access/isAdmin'
 import { publishedOnly } from '../access/publishedOnly'
+import { Accordion } from '../blocks/Accordion'
 import { Banner } from '../blocks/Banner'
 import { BlogContent } from '../blocks/BlogContent'
 import { BlogMarkdown } from '../blocks/BlogMarkdown'
@@ -58,7 +59,7 @@ export const Posts: CollectionConfig = {
     {
       name: 'content',
       type: 'blocks',
-      blocks: [Banner, BlogContent, Code, BlogMarkdown, MediaBlock, StickyContent],
+      blocks: [Accordion, Banner, BlogContent, Code, BlogMarkdown, MediaBlock, StickyContent],
       required: true,
     },
     slugField(),

@@ -2,6 +2,7 @@ import type { CollectionConfig } from 'payload/types'
 
 import { isAdmin } from '../access/isAdmin'
 import { publishedOnly } from '../access/publishedOnly'
+import { Accordion } from '../blocks/Accordion'
 import { CallToAction } from '../blocks/CallToAction'
 import { CardGrid } from '../blocks/CardGrid'
 import { CaseStudiesHighlight } from '../blocks/CaseStudiesHighlight'
@@ -76,6 +77,7 @@ export const CaseStudies: CollectionConfig = {
       name: 'layout',
       type: 'blocks',
       blocks: [
+        Accordion,
         CallToAction,
         CardGrid,
         CaseStudiesHighlight,

@@ -1,6 +1,7 @@
 import type { CollectionConfig } from 'payload/types'
 
 import { isAdmin } from '../access/isAdmin'
+import { Accordion } from '../blocks/Accordion'
 import { Banner } from '../blocks/Banner'
 import { BlogContent } from '../blocks/BlogContent'
 import { BlogMarkdown } from '../blocks/BlogMarkdown'
@@ -51,6 +52,7 @@ export const ReusableContent: CollectionConfig = {
       type: 'blocks',
       required: true,
       blocks: [
+        Accordion,
         Banner,
         BlogContent,
         BlogMarkdown,
